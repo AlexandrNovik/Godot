@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciktord40mmtr"]
+
+[ext_resource type="Script" path="res://Buttons/Menu/PlayButton.gd" id="1_tdka4"]
+[ext_resource type="Script" path="res://Buttons/Menu/QuitButton.gd" id="2_kbbp4"]
+[ext_resource type="PackedScene" uid="uid://bmkrcy1aeq2pj" path="res://Common/parallax_background.tscn" id="3_8qmnn"]
+
+[node name="Menu" type="Node2D"]
+
+[node name="PlayButton" type="Button" parent="."]
+custom_minimum_size = Vector2(350, 100)
+offset_left = 404.0
+offset_top = 199.0
+offset_right = 754.0
+offset_bottom = 299.0
+theme_override_font_sizes/font_size = 50
+text = "Play"
+script = ExtResource("1_tdka4")
+
+[node name="QuitButton" type="Button" parent="."]
+custom_minimum_size = Vector2(350, 100)
+offset_left = 404.0
+offset_top = 365.0
+offset_right = 754.0
+offset_bottom = 465.0
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+script = ExtResource("2_kbbp4")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("3_8qmnn")]
+
+[connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_pressed"]
+[connection signal="pressed" from="QuitButton" to="QuitButton" method="_on_pressed"]
