@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dikb2dhhw32a"]
+
+[ext_resource type="Script" path="res://Traps/key_pikes.gd" id="1_dn3h3"]
+[ext_resource type="Texture2D" uid="uid://dadd3dgyb41vg" path="res://Assets/Traps/Key.png" id="1_u6jsj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_leb5k"]
+radius = 28.0
+height = 84.0
+
+[node name="KeyPikes" type="Area2D"]
+script = ExtResource("1_dn3h3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9.53674e-07, 3.8147e-06)
+scale = Vector2(0.572727, 0.572727)
+texture = ExtResource("1_u6jsj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_leb5k")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

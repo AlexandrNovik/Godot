@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://hnbrh4uobs51" path="res://Assets/kenney_topdownTanksRedux/Spritesheet/onlyObjects_retina.png" id="3_6hj8d"]
 [ext_resource type="PackedScene" uid="uid://dqmklbrwn3jaw" path="res://Player/mouse.tscn" id="5_s73y2"]
 [ext_resource type="PackedScene" uid="uid://gh416cwihdd6" path="res://Player/cat.tscn" id="6_5e8mi"]
-[ext_resource type="PackedScene" uid="uid://dikb2dhhw32a" path="res://Traps/key_pikes.tscn" id="7_82ixd"]
+[ext_resource type="PackedScene" uid="uid://c3x7wgvc2u6rd" path="res://Traps/key.tscn" id="7_eetg1"]
 [ext_resource type="PackedScene" uid="uid://cxjivpari1iw7" path="res://Traps/trap_pikes.tscn" id="7_wot0f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kcqfn"]
@@ -28894,8 +28894,8 @@ position = Vector2(54, 72)
 [node name="Mouse" parent="." instance=ExtResource("5_s73y2")]
 position = Vector2(1333, 1336)
 
-[node name="PikesTrap" parent="." instance=ExtResource("7_wot0f")]
-position = Vector2(896, 590)
+[node name="TrapPikeKey" parent="." instance=ExtResource("7_eetg1")]
+position = Vector2(926, 471)
 
-[node name="PikesKey" parent="." instance=ExtResource("7_82ixd")]
-position = Vector2(936, 468)
+[node name="AreaPikes" parent="." instance=ExtResource("7_wot0f")]
+position = Vector2(215, 184)
